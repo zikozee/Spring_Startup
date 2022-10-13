@@ -9,4 +9,4 @@
 - setter injection: requires the use of <property name="fortuneService"  ref="myFortuneService"/>
 - the above looks for a void class with name setFortuneService(...) which is used for injection of bean with Name myFortuneService
 - setter injection: requires the use of <property name="emailAddress"  value="myemail.com"/>
-- injecting values directly
+- injecting values directly the baove
