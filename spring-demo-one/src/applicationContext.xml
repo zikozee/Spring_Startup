@@ -8,7 +8,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- define the dependency-->
-    <bean id="myFortune" class="com.zikozee.springdemo.HappyFortuneService">
+    <bean id="myFortuneService" class="com.zikozee.springdemo.HappyFortuneService">
     </bean>
 
     <!-- Define your beans here -->
@@ -16,8 +16,20 @@
           class="com.zikozee.springdemo.TrackCoach">
 
         <!-- set up constructor injection-->
-        <constructor-arg ref="myFortune" />
+        <constructor-arg ref="myFortuneService" />
     </bean>
+
+    <bean id="myCricketCoach"
+          class="com.zikozee.springdemo.CricketCoach">
+
+        <!-- set up setter injection  name below, spring will look for a setter called serFortuneService(...)-->
+        <property name="fortuneService" ref="myFortuneService" />
+
+        <!-- inject literal values-->
+        <property name="emailAddress" value="thebestcoach@ziko.com" />
+        <property name="team" value="Zee Bomba" />
+    </bean>
+
 
     <bean id="myLoggerConfig" class="com.zikozee.springdemo.MyLoggerConfig" init-method="initLogger">
         <property name="rootLoggerLevel" value="FINE" />
