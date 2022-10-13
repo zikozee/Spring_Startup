@@ -7,6 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+    <!-- load the properties file: sport.properties-->
+    <context:property-placeholder location="classpath:sport.properties"/>
+
     <!-- define the dependency-->
     <bean id="myFortuneService" class="com.zikozee.springdemo.HappyFortuneService">
     </bean>
@@ -26,8 +30,12 @@
         <property name="fortuneService" ref="myFortuneService" />
 
         <!-- inject literal values-->
-        <property name="emailAddress" value="thebestcoach@ziko.com" />
-        <property name="team" value="Zee Bomba" />
+<!--        <property name="emailAddress" value="thebestcoach@ziko.com" />-->
+<!--        <property name="team" value="Zee Bomba" />-->
+
+        <!-- loading from file-->
+        <property name="emailAddress" value="${foo.email}" />
+        <property name="team" value="${foo.team}" />
     </bean>
 
 
@@ -35,7 +43,6 @@
         <property name="rootLoggerLevel" value="FINE" />
         <property name="printedLoggerLevel" value="FINE"/>
     </bean>
-    
 </beans>
 
 

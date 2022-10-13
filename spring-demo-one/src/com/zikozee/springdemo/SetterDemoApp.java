@@ -22,7 +22,7 @@ public class SetterDemoApp {
 
         //call our new methods to get the literal values
         System.out.println("email: "+ theCoach.getEmailAddress() );
-        System.out.println("team " + theCoach.getTeam());
+        System.out.println("team: " + theCoach.getTeam());
         // close the context
         context.close();
     }
