@@ -5,9 +5,7 @@ package com.zikozee.springdemo;
  * @created: 13 October 2022
  */
 
-public interface Coach {
+public interface FortuneService {
 
-    String getDailyWorkout();
-
-    String getDailyFortune();
+    String getFortune();
 }
