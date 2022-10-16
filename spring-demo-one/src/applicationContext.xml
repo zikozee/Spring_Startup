@@ -15,12 +15,23 @@
     <bean id="myFortuneService" class="com.zikozee.springdemo.HappyFortuneService">
     </bean>
 
+    <bean id="myRandomFortune" class="com.zikozee.springdemo.RandomFortuneService">
+    </bean>
+
     <!-- Define your beans here -->
     <bean id="myCoach"
           class="com.zikozee.springdemo.TrackCoach">
 
         <!-- set up constructor injection-->
         <constructor-arg ref="myFortuneService" />
+    </bean>
+
+    <!-- Define your beans here -->
+    <bean id="myAssignmentCoach"
+          class="com.zikozee.springdemo.AssignmentCoach">
+
+        <!-- set up constructor injection-->
+        <constructor-arg ref="myRandomFortune" />
     </bean>
 
     <bean id="myCricketCoach"
