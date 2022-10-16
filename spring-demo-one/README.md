@@ -14,3 +14,11 @@
 ##  loadings value from property file
 - we set context like this    **<context:property-placeholder location="classpath:sport.properties"/>**
 - we then load the property via syntax    <property name="team" value="${PROPERTY_NAME}"  /> 
+
+
+## Scopes
+- **singleton** : -> creates a single shared instance of the bean. Default scope
+- **prototype** : -> creates a new bean instance for each container request
+- **request** : -> Scoped to an HTTP web request. Only used for web apps
+- **session** : -> Scoped to an HTTP web session. Only used for web apps
+- **global-session** : -> Scoped to a global HTTP web session. Only used for web apps
