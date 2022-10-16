@@ -34,3 +34,4 @@
 ## How to destroy prototype
 - By default prototype bean does not call the destroy method
 - we need implement a DisposableBean and override the **destroy()** method
+- OR just implement [this](https://bluebreeze0812.github.io/learn/2019/10/17/Spring-Destroy-Prototype-Beans/#:~:text=Therefore%20it's%20usually%20not%20necessary,hooks%20of%20your%20prototype%20beans.) as a component
