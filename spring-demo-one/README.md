@@ -16,9 +16,21 @@
 - we then load the property via syntax    <property name="team" value="${PROPERTY_NAME}"  /> 
 
 
-## Scopes
+## Bean Scopes
 - **singleton** : -> creates a single shared instance of the bean. Default scope
 - **prototype** : -> creates a new bean instance for each container request
 - **request** : -> Scoped to an HTTP web request. Only used for web apps
 - **session** : -> Scoped to an HTTP web session. Only used for web apps
 - **global-session** : -> Scoped to a global HTTP web session. Only used for web apps
+
+## Bean LifeCycle
+- container starts -> bean instantiated -> dependencies injected -> internal Spring processing -> ...
+- ... Your Custom Init method -> Bean is ready for use -> Your custom Destroy Method
+
+- init-Method and destroy-Method should take in method that has no args
+- is should be void (though can have a return type), but the return type is not captured
+- it can take any access modifiers
+
+## How to destroy prototype
+- By default prototype bean does not call the destroy method
+- we need implement a DisposableBean and override the **destroy()** method
