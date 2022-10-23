@@ -8,4 +8,5 @@ package com.zikozee.springdemo;
 public interface Coach {
 
     String getDailyWorkout();
+    String getDailyFortune();
 }
