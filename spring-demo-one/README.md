@@ -35,3 +35,8 @@
 - By default prototype bean does not call the destroy method
 - we need implement a DisposableBean and override the **destroy()** method
 - OR just implement [this](https://bluebreeze0812.github.io/learn/2019/10/17/Spring-Destroy-Prototype-Beans/#:~:text=Therefore%20it's%20usually%20not%20necessary,hooks%20of%20your%20prototype%20beans.) as a component
+
+## PostConstruct PreDestroy
+- PostConstruct this run after a bean has bean initialized
+- PreDestroy this can be used  to do some clean up work  before bean  is destroyed
+- Also in Bean(initMethod="") --> not commonly used as the method to run before the bean can just be written within the bean
